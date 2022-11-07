@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sfondo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A19999"
+    tools:context=".ActivityTabellaPresenze">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/aggiungiPresenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="65dp"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:onClick="aggPresenza"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@color/black"
+        android:isScrollContainer="false"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:isScrollContainer="true"
+            android:nestedScrollingEnabled="true"
+            android:overScrollMode="always"
+            android:stretchColumns="*"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_dark">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/orario"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lune"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/marted"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/mercoled"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/gioved"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/venerd"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/prima"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp1"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp2"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp3"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp4"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp5"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/seconda"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp6"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp7"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp8"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp9"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp10"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/terza"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp11"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp12"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp13"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp14"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp15"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/quarta"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp16"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp17"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp18"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp19"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp20"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/quinta"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp21"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp22"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp23"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp24"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp25"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:text="@string/sesta"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sp26"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp27"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp28"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp29"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/sp30"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#B98E8A8A"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:smsp_arrowSize="10dp"
+                    app:smsp_itemColor="#FFFFFF"
+                    app:smsp_itemSize="10sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/docTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/docenti"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/prova"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#B5B4B3"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:smsp_alwaysShowFloatingLabel="true"
+        app:smsp_arrowColor="@color/black"
+        app:smsp_arrowPaddingBottom="5sp"
+        app:smsp_arrowSize="30dp"
+        app:smsp_enableFloatingLabel="false"
+        app:smsp_floatingLabelColor="@color/black"
+        app:smsp_floatingLabelText="Prof."
+        app:smsp_hint="Seleziona il Docente"
+        app:smsp_hintColor="@color/black"
+        app:smsp_hintSize="25dp"
+        app:smsp_itemColor="#000000"
+        app:smsp_itemListBackgroundColor="@color/purple_500"
+        app:smsp_itemListColor="#D92CF6"
+        app:smsp_itemListHintBackgroundColor="@color/teal_700"
+        app:smsp_itemListHintColor="#FFFFFF"
+        app:smsp_itemSize="16dp"
+        app:smsp_selectedItemListColor="#FF0000" />
+
+    <FrameLayout
+        android:id="@+id/contentGramsci"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:longClickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/gramsciColor"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="#656060"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="Gramsci"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/contentVilla"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:longClickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/contentGramsci">
+
+        <TextView
+            android:id="@+id/villaColor"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:backgroundTint="#656060"
+            android:gravity="center"
+            android:longClickable="true"
+            android:text="Villa"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Legenda Colori Sedi"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/contentGramsci"
+        app:layout_constraintStart_toStartOf="@+id/contentVilla" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

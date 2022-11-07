@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Gestione Ore Docenti</string>
+    <string name="aggiungi_docente">Aggiungi Docente</string>
+    <string name="materia">Materia</string>
+    <string name="cognome">Cognome</string>
+    <string name="nome">Nome</string>
+    <string name="sezione_anno_sezione_corso">Sezione (Anno, Sezione, Corso)</string>
+    <string name="aggiungi_sezione">Aggiungi Sezione</string>
+    <string name="textview">TextView</string>
+    <string name="aggiungi_classi">Aggiungi Classi</string>
+    <string name="luned">Lunedì</string>
+    <string name="row_2_ncolumn_3">Row 2\nColumn 3</string>
+    <string name="row_2_ncolumn_2">Row 2\nColumn 2</string>
+    <string name="row_2_ncolumn_4">Row 2\nColumn 4</string>
+    <string name="lunedi">Lunedì</string>
+    <string name="row_2_ncolumn_5">Row 2\nColumn 5</string>
+    <string name="docente">Docente</string>
+    <string name="venerdi">Venerdi</string>
+    <string name="giovedi">Giovedi</string>
+    <string name="mercoledi">Mercoledi</string>
+    <string name="martedi">Martedi</string>
+    <string name="lunedì">Lunedi</string>
+    <string name="ore">Ore</string>
+    <string name="salva">Salva</string>
+    <string name="schede">SCHEDE</string>
+    <string name="aggiungi_classì">AGGIUNGI CLASSI</string>
+    <string name="docent">Docente</string>
+    <string name="sesta">6ª</string>
+    <string name="quinta">5ª</string>
+    <string name="quarta">4ª</string>
+    <string name="terza">3ª</string>
+    <string name="seconda">2ª</string>
+    <string name="prima">1ª</string>
+    <string name="venerd">VEN</string>
+    <string name="gioved">GIO</string>
+    <string name="mercoled">MER</string>
+    <string name="marted">MAR</string>
+    <string name="lune">LUN</string>
+    <string name="orario">ORA</string>
+    <string name="todo">TODO</string>
+    <string name="docenti">Docenti</string>
+    <string name="ButInsert">TextView</string>
+    <string name="confirm" />
+    <string name="cancel" />
+
+</resources>
+
